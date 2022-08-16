@@ -1,0 +1,27 @@
+.pagination {
+    margin: 2rem 0.25rem;
+    padding: 0.25rem 0.5rem;
+    border: none;
+    border-radius: 0.4rem;
+    background: linear-gradient(
+      180deg,
+      rgb(255, 157, 0) 0%,
+      rgba(255, 64, 0, 0.71) 100%
+    );
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    cursor: pointer;
+  }
+  
+  .input {
+    text-align: center;
+    width: 1rem;
+    height: 1.35rem;
+    border-radius: 0.25rem;
+    border: 1px solid rgba(139, 78, 58, 0.71);
+    background-color: transparent;
+    color: rgb(68, 43, 10);
+  }
+  .span {
+    color: rgb(0, 0, 0);
+  }

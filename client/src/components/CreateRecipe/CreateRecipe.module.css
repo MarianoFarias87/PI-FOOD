@@ -1,0 +1,192 @@
+.background {
+    background-image: url("https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=732&q=80");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    background-attachment: fixed;
+}
+
+.button {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: rgb(0, 0, 0) solid 3px;
+    border-radius: 100px;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    align-self: center;
+    padding: 25px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #fff;
+    color: #000000;
+    transition-delay: 0.2s;
+    transition: 0.8s;
+}
+
+.mainTitle {
+    align-self: center;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+
+.formContainer {
+    background: rgba(233, 228, 228, 0.651);
+    width: 45%;
+    height: 50%;
+    margin: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;   
+    padding-left: 5px;
+    padding-right: 5px; 
+    box-shadow: 0px 0px 30px 2px rgb(44, 43, 43);
+    font-family: 'Dosis', sans-serif;
+    border-color: rgb(227, 230, 227);
+    border-style: solid;  
+    display: flex;
+    flex-direction: column;
+}
+
+.subContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.subTitle {
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+}
+
+.subInput {
+    flex-direction: column;
+    align-self: center;
+    width: 90%;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    /*
+    border: none;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    */
+}
+
+.subTextBox {
+    width: 90%;
+    height: 100px;
+    flex-direction: column;
+    align-self: center;
+    box-sizing: border-box;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    padding: 6px 10px;
+}
+
+.select {
+    width: 60%;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #2cc3ff;
+    font-weight: bold;
+    flex-direction: column;
+    align-self: center;
+    margin: 15px
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: 15px;
+    color: white;
+    border:hidden;
+    background-color: rgb(0, 0, 0);
+    border-radius: 100%;
+    font-size: 18px;
+    padding: 8px 8px 8px 8px
+    
+}
+
+.diets {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.submitButton {
+    margin: 20px;
+    border: none;
+    border-radius: 10px;
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    background-color: #24721a;
+    color: #fff;
+    box-shadow: 0 2px 2px rgba(0,0,0,.5); 
+    cursor: pointer;
+    width: 120px;
+    height: 50px;
+    font-size: 18px;
+    font-weight:bolder;
+    align-self: center;
+}
+
+.submitButton:hover{ 
+    transition-delay: 0.2s;
+    transition: 0.8s;
+    background-color: rgb(88, 10, 189);
+    border: none;
+    color: #ffffff;
+}
+
+.error {
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    color: #FF0000;
+    text-align:center;
+    font-size: 14px;
+}
+
+.selectedDiets {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    box-sizing: border-box;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    border-color: black;
+    margin-top: 5px;
+    margin-left:  30px;
+    padding-left: 10px;
+
+
+}
+.crossButton {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: 15px;
+    color: white;
+    border:hidden;
+    background-color: rgb(0, 0, 0);
+    border-radius: 100%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.crossButton:hover {
+    transition-delay: 0.2s;
+    transition: 0.8s;
+    background-color: rgb(255, 0, 0);
+    border: none;
+    color: #000000;
+}
