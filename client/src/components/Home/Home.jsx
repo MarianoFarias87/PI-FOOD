@@ -14,8 +14,6 @@ export default function Home() {
   const dispatch = useDispatch()
   const recipes = useSelector((state) => state.showedRecipes)
   const allDiets = useSelector((state) => state.diets)
-
-
   const [page, setPage] = useState(1);
   const recipesPerPage = 9;
   const end = page * recipesPerPage; //index of the last recipe
@@ -142,7 +140,6 @@ export default function Home() {
           )
       }
       </div>
-
 
 
       <Pagination
