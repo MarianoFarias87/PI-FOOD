@@ -32,6 +32,7 @@ export default function Home() {
     dispatch(getRecipes())
     setPage(1)
     setOrder('')
+    document.getElementById("sss").value = "all"
   }
 
   function handleOrderByName(e) {
@@ -99,7 +100,7 @@ export default function Home() {
 
 
           <h4>Filter by Diet</h4>
-          <select className={s.select} onChange={(e) => { handleDiets(e) }}>
+          <select id="sss" className={s.select} onChange={(e) => { handleDiets(e) }}>
             <option value="all"> All </option>
             {allDiets?.map((diet) => (
             <option key={diet.id} value={diet.name}> {diet.name} </option>

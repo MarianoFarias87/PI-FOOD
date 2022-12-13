@@ -1,4 +1,4 @@
-.container {
+/* .container {
     background-color: white;
 }
 
@@ -36,4 +36,159 @@
 .info {
     font-size: 14px;
     text-align: left;
+} */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-image: url('../../Utils/DetailBackgroundFull.png');
+    height: 3168px;
 }
+
+.image {
+    width: 607px;
+    height: 604px;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.imgContainer {
+    display: flex;
+    margin-left: 200px;
+    margin-top: 80px;
+}
+
+.info {
+    width: 780px;
+    margin-left: 150px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.mainTitle {
+    font-size: 38px;
+    font-weight: 600;
+    display: flex;
+    text-align: start;
+    margin-top: 0px;
+}
+
+.subTitle {
+    font-size: 30px;
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 0px;
+}
+
+.summary {
+    font-size: 18px;
+    line-height: 35px;
+    display: flex;
+    text-align: start;
+}
+
+.titleContainer {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.steps {
+    margin-top: 200px;
+    margin-left: 650px;
+    text-align: start;
+}
+
+.steps h3 {
+    margin-left: 148px;
+    font-size: 36px;
+}
+
+.steps p {
+    font-size: 18px;
+}
+
+.steps p {
+    display: inline-block;
+  }
+  
+  .steps p:first-letter {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .middleBox {
+    display: flex;
+    gap: 200px;
+    margin-left: 200px;
+    margin-top: 130px;
+  }
+
+  .diets {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+  }
+
+  .diets p {
+    font-size: 18px;
+  }
+
+  .dishes {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+  }
+
+  .dishes p {
+    font-size: 18px;
+  }
+
+  .healths progress {
+    margin-left: 20px;
+    margin-top: 8px;
+  }
+
+  .numbers {
+    margin-left: 20px;
+  }
+
+  .more {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+    margin-top: 70px;
+    font-size: 36px;
+    line-height: 10px;
+  }
+
+  .buttonBox {
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+
+  .btn {
+    font-size: 20px;
+    width: 202px;
+    height: 56px;
+    background: #2D2D2D;
+    border-radius: 52px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 0px;
+    align-items: flex-start;
+  }
+
+  .btn:hover {
+    background-color: #fff;
+    color: #000000;
+    transition-delay: 0.2s;
+    transition: 0.8s;
+  }

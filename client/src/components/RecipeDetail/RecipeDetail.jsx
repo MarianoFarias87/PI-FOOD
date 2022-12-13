@@ -18,13 +18,14 @@ export default function RecipeDetail() {
 
     return (
         <div className={s.container}>
-            <Link to='/home'>
-                <button>Home</button>
-            </Link>
+            <div className={s.buttonBox}>
+                <Link to='/home'>
+                    <button className={s.btn} type="button">Back</button>
+                </Link>
+            </div>
             <div className={s.subContainer} >
-                <h3 className={s.mainTitle}>{name}</h3>
                 <div className={s.topBox} >
-                    <div>
+                    <div className={s.imgContainer}>
 
                         <img className={s.image}
                             src={image}
@@ -32,34 +33,43 @@ export default function RecipeDetail() {
                             width="500px"
 
                         />
-                    </div>
-                    <div>
+                        <div>
+                            <div className={s.info}>
+                                <div className={s.titleContainer}>
+                                    <h3 className={s.mainTitle}>{name}</h3>
+                                </div>
 
-                        <h3 className={s.subTitle}>Summary</h3>
-                        <p className={s.info}>{summary && summary.replace(/<[^>]+>/g, "")}</p>
+                                <h3 className={s.subTitle}>Summary</h3>
+                                <p className={s.summary}>{summary && summary.replace(/<[^>]+>/g, "")}</p>
+                            </div>
 
+                        </div>
                     </div>
                 </div>
 
-
+                <div className={s.more}>
+                    <h5>Read more below</h5>
+                    <h2>&</h2>
+                    <h2>Enjoy cooking</h2>
+                </div>
 
                 <div className={s.middleBox}>
-                    <div className={''}>
-                        <h3 className={s.subTitle}>Diet Types</h3>
+                    <div className={s.diets}>
+                        <h3 className={s.subTitle}>Diet Types:</h3>
                         {diets?.map((d) => (
                             d.name ?
-                                <p className={s.info} key={d}>{d.name}</p>
-                                : <p className={s.info} key={d}>{d}</p>))}
+                                <p className={''} key={d}>{d.name}</p>
+                                : <p className={''} key={d}>{d}</p>))}
                     </div>
-                   
-                    <div className={''}>
+
+                    <div className={s.dishes}>
 
                         {dish ?
                             <div>
                                 <h3 className={s.subTitle}>Dish Types: </h3>
                                 {dish?.map(d => {
                                     return (
-                                        <p className={s.info} key={d}>- {d[0].toUpperCase() + d.slice(1)} </p>
+                                        <p className={''} key={d}>- {d[0].toUpperCase() + d.slice(1)} </p>
                                     )
                                 })}
                             </div> :
@@ -67,7 +77,7 @@ export default function RecipeDetail() {
                         }
 
                     </div>
-                    <div className={''}>
+                    <div className={s.healths}>
                         <span id="healthScore" className={s.subTitle}>
                             Health Level:{" "}
                             <progress
@@ -76,13 +86,16 @@ export default function RecipeDetail() {
                                 value={healthScore}
 
                             />{" "}
-                            {healthScore}/100
+                            <span className={s.numbers}>
+
+                                {healthScore}/100
+                            </span>
                         </span>
                     </div>
                 </div>
 
 
-                <div className={s.bottomBox}>
+                <div className={s.steps}>
                     <h3 className={s.subTitle}>Steps</h3>
                     {Array.isArray(steps) ? steps.map((st) => {
                         return (
