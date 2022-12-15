@@ -198,6 +198,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #fff;
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
@@ -249,12 +250,16 @@
     
     font-size: 14px;
     width: 500px;
-    height: 50px;
+    height: 40px;
     align-items: center;
     padding: 30px;
     background: #FFFFFF;
     border: 1px solid #DFDFDF;
     border-radius: 71px;
+}
+
+.subTextBox {
+    height: 60px;
 }
 
 .formContainer h4, h5 {
@@ -270,7 +275,7 @@
     width: 500px;
     padding-top: 40px;
     height: 110px;
-    padding-left: 40px;
+    padding-left: 30px;
     box-sizing: border-box;
     background: #FFFFFF;
     border: 1px solid #DFDFDF;
@@ -307,7 +312,7 @@
 }
 
 .img {
-    height: 800px;
+    height: 700px;
     margin-top: -50px;
 }
 
@@ -331,11 +336,15 @@
 
 .healthContainer {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -50px;
 }
 
 .drag__bar {
     -webkit-appearance: none;
-    width: 100%;
+    width: 280px;
     height: 8px;
     border-radius: 5px;
     background: #A2F3EA;
@@ -343,6 +352,8 @@
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
+    position: fixed;
+    margin-left: 145px;
   }
   
   .drag__bar:hover {
@@ -380,4 +391,76 @@
  .errores {
     display: flex;
     position: fixed;
+    font-size: 12px;
+    color: red;
+    font-weight: 400;
  }
+
+ .data {
+    color: #11D8C2;
+    font-size: 28px;
+    font-weight: 600;
+ }
+
+ .subTitle {
+    font-size: 16px;
+    font-weight: normal;
+    color: gray;
+ }
+
+ .subContainer {
+    margin-bottom: 43px;
+ }
+
+ .select {
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 14px;
+    color: gray;
+    width: 500px;
+    height: 40px;
+    padding-left: 20px;
+    border: 1px solid #DFDFDF;
+    border-radius: 71px;
+ }
+
+.ulContainer {
+    display: grid;
+    grid-template-columns: 246px 246px;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.selectedDiets {
+    display: flex;
+    justify-content: flex-start;
+    border: 1px solid #A2F3EA;
+    
+    color: #0ea190;
+    border-radius: 71px;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #A2F3EA;
+    
+    
+    /* background-image: linear-gradient(to right, #92fee1 0%, #00ffd9 100%); */
+    /* background-image: linear-gradient(to right, #92fee1 0%, #00ffc8 100%); */
+    /* background-image: linear-gradient(to top, #89fdc1 0%, #12fff7 100%); */
+    /* background-image: linear-gradient(-225deg, #DFFFCD 0%, #90F9C4 48%, #39F3BB 100%); */
+    /* background-image: linear-gradient(-225deg, #D4FFEC 0%, #57F2CC 48%, #4596FB 100%); */
+    /* background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%); */
+    background-image: linear-gradient(to right, #a6f9f0 0%, #2ff4dd 100%);
+}
+
+.crossButton {
+    background-color: #8bf3e7;
+    border-radius: 12px;
+    border: 1px solid #A2F3EA;
+    box-shadow:0px 0px 8px 5px rgba(228, 248, 242, 0.7);
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0fb29f;
+}

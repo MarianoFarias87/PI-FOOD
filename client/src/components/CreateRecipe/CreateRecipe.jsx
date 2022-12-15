@@ -33,7 +33,7 @@ export default function CreateRecipe() {
     let errors = {}
 
     if (!input.name.length) {
-      errors.name = 'Name cannot be empty'
+      errors.name = 'Name cannot be empty*'
     }
 
     if (!validateName.test(input.name)) {
@@ -48,11 +48,11 @@ export default function CreateRecipe() {
     }
 
     if (!input.summary.length) {
-      errors.summary = 'Summary cannot be empty'
+      errors.summary = 'Summary cannot be empty*'
     }
 
     if (input.summary.length < 40) {
-      errors.summary = 'Summary must be at least 40 characters'
+      errors.summary = 'Summary must be at least 40 characters*'
     }
 
     if (input.healthScore < 1 || input.healthScore > 100) {
@@ -60,11 +60,11 @@ export default function CreateRecipe() {
     }
 
     if (!input.steps.length) {
-      errors.steps = 'Your recipe must have steps to follow'
+      errors.steps = 'Your recipe must have steps to follow*'
     }
 
     if (input.steps.length < 40) {
-      errors.steps = 'Your recipe must have more details'
+      errors.steps = 'Your recipe must have more details*'
     }
 
     return errors;
@@ -159,7 +159,7 @@ export default function CreateRecipe() {
                 className={s.subInput}
                 type="text" value={input.name}
                 name="name"
-                placeholder="Recipe Name"
+                placeholder="Recipe Name..."
                 onChange={(e) => handleChange(e)} />
               {errors.name && <div className={s.errores}><p className={s.errors}>{errors.name}</p></div>}
             </div>
@@ -171,7 +171,7 @@ export default function CreateRecipe() {
                 type="text"
                 value={input.summary}
                 name="summary"
-                placeholder="Summary"
+                placeholder="Summary..."
                 maxLength="1000"
                 onChange={(e) => handleChange(e)}>
               </textarea>
@@ -195,7 +195,7 @@ export default function CreateRecipe() {
                 type="text"
                 value={input.steps}
                 name="steps"
-                placeholder="Steps"
+                placeholder="Steps..."
                 onChange={(e) => handleChange(e)}>
               </textarea>
               {errors.steps && (<div className={s.errores}><p className={s.error}>{errors.steps}</p></div>)}
@@ -220,16 +220,22 @@ export default function CreateRecipe() {
                 })
                 }
               </select>
-              <ul className={s.diets}>
-                <li>
+              <div className={s.ulContainer}>
+
+              
+              
                   {input.diets.map((diet, index) =>
                     <div key={index} className={s.selectedDiets}>
+                      
+
                       <p>{diets?.find(element => element.id === diet)?.name}</p>
-                      <button type='button' className={s.crossButton} onClick={() => handleDietDelete(diet)}>x</button>
+                      <button type='button' className={s.crossButton} onClick={() => handleDietDelete(diet)}>X</button>
+                      
                     </div>
                   )}
-                </li>
-              </ul>
+                
+              
+              </div>
             </div>
             <div>
               <button className={s.submitButton}
