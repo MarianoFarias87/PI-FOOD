@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import { createRecipe, getDiets } from "../../redux/actions";
 import s from './CreateRecipe.module.css'
-import img from '../../Utils/FormImg.png'
+import img from '../../Utils/FormImgNew.png'
 
 export default function CreateRecipe() {
   const dispatch = useDispatch()
@@ -131,19 +131,29 @@ export default function CreateRecipe() {
 
   return (
     <div className={s.background}>
-      {/* <div className={s.header}>
-
-        <Link to="/home" >
-          <button className={s.button}>Home</button>
-        </Link>
-
-      </div> */}
 
       <div className={s.textHeader}>
+        <div className={s.mainTexts}>
+
         <h4>Recipe</h4>
+        
+        
+
         <h1 className={s.mainTitle}>Make Your Own</h1>
+        
+        
+
         <h5>Show the world how it's done.</h5>
+        </div>
+      <div className={s.header}>
+
+        <Link to="/home" >
+          <button className={s.button}>Back</button>
+        </Link>
+
       </div>
+      </div>
+      
       <form className={s.formContainer} onSubmit={(e) => handleSubmit(e)}>
         <div className={s.allContainer}>
 
